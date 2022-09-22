@@ -1,0 +1,89 @@
+<form version="1.1" theme="dark">
+  <label>Movie Details Dashboard</label>
+  <fieldset submitButton="false">
+    <input type="dropdown" token="year">
+      <label>Year</label>
+    </input>
+    <input type="dropdown" token="gener">
+      <label>Gener</label>
+      <choice value="*">All</choice>
+      <initialValue>*</initialValue>
+      <fieldForLabel>name</fieldForLabel>
+      <fieldForValue>name</fieldForValue>
+      <search>
+        <query>| geners</query>
+      </search>
+    </input>
+    <input type="dropdown" token="movielist">
+      <label>Movie List</label>
+    </input>
+    <input type="dropdown" token="language">
+      <label>Language</label>
+      <choice value="*">All</choice>
+      <default>*</default>
+      <fieldForLabel>lang</fieldForLabel>
+      <fieldForValue>lang</fieldForValue>
+      <search>
+        <query>| lang |dedup lang</query>
+      </search>
+    </input>
+    <input type="dropdown" token="upcomingmovie">
+      <label>Upcoming Movie</label>
+      <choice value="*">All</choice>
+      <default>*</default>
+      <fieldForLabel>upcoming movie</fieldForLabel>
+      <fieldForValue>upcoming movie</fieldForValue>
+      <search>
+        <query>| title</query>
+        <earliest>0</earliest>
+        <latest></latest>
+      </search>
+    </input>
+  </fieldset>
+  <row>
+    <panel>
+      <title>Release DAte</title>
+      <single>
+        <search>
+          <query>0</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="drilldown">none</option>
+      </single>
+    </panel>
+    <panel>
+      <title>Movie Title</title>
+      <single>
+        <search>
+          <query>0</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="drilldown">none</option>
+      </single>
+    </panel>
+    <panel>
+      <title>Reviews</title>
+      <table>
+        <search>
+          <query>0</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="drilldown">none</option>
+      </table>
+    </panel>
+    <panel>
+      <title>Recomendations</title>
+      <table>
+        <search>
+          <query>0</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="drilldown">none</option>
+      </table>
+    </panel>
+  </row>
+</form>

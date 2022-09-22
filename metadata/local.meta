@@ -1,0 +1,14 @@
+[app/ui]
+version = 9.0.1
+modtime = 1663646484.218872200
+
+[app/launcher]
+version = 9.0.1
+modtime = 1663646484.256927200
+
+[views/movie_details_dashboard_]
+access = read : [ * ], write : [ admin ]
+export = system
+owner = thilak
+version = 9.0.1
+modtime = 1663849720.775877500
